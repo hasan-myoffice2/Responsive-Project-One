@@ -1,12 +1,11 @@
+@use "variable" as *;
+@use 'glowbal';
 @use 'header';
-@use 'variable';
+@use 'home';
+@use 'footer';
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 
 

@@ -1,0 +1,146 @@
+@use 'variable' as *;
+
+// Footer Section Start
+.footer-section {
+  // padding: 45px 0;
+  background-color: $footerColor;
+  color: $secenderyColor;
+
+  .footer-items {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    // position: relative;
+  }
+
+  .square {
+    width: 30px;
+    height: 30px;
+    background-color: $primaryColor;
+    position: absolute;
+    top: -34%;
+    left: 50%;
+    transform: rotate(40deg);
+    border: 1px solid $secenderyColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  .square:hover {
+    background-color: $footerColor;
+    color: $secenderyColor;
+    font-weight: bold;
+  }
+
+  .square span {
+    transform: rotate(-40deg);
+    font-size: 14px;
+  }
+
+  .footer-text h3 {
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .footer-text p {
+    line-height: 1.7rem;
+    color: $textColor;
+    font-size: 14px;
+  }
+
+  .footer-text ul {
+    list-style-type: none;
+    color: $textColor;
+    font-size: 14px;
+    padding: rem 0;
+  }
+
+  .footer-text ul li:hover {
+    color: $primaryColor;
+  }
+
+  .footer-text ul li {
+    font-size: 14px;
+    text-transform: capitalize;
+    margin: 0.6rem 0;
+    display: flex;
+    gap: 12px;
+  }
+
+  .footer-text ul li i {
+    font-size: 10px;
+  }
+
+  ul .call {
+    font-size: 13px !important;
+  }
+
+  .icons-items {
+    display: flex;
+    gap: 0.2rem;
+  }
+
+  .icons-items li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid $textColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  .icons-items li:hover {
+    background-color: $primaryColor;
+    border: none;
+  }
+
+  .icons-items li:hover i {
+    color: $secenderyColor;
+  }
+
+  .icons-items li i {
+    font-size: 13px !important;
+    color: $textColor;
+  }
+
+  hr {
+    border: none;
+    border: 1px solid rgba(243, 245, 241, 0.308);
+    border-bottom: $textColor;
+  }
+
+  .end-text {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .end-text p {
+    font-size: 14px;
+    color: $textColor;
+  }
+
+  .end-text i {
+    color: #dc3545;
+    font-size: 13px;
+  }
+}
+// Footer Section End
+
+// Media Satrt 
+@media (max-width: 959.98px) {
+  .footer-text .hidden ul {
+    display: none;
+  }
+  .flex-one {
+    width: 100%;
+  }
+}
+// Media End
