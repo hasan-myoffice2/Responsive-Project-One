@@ -1,105 +1,296 @@
 @use "variable" as *;
 
-// Navbar Section Start
-.navbar {
-  .navbar-nav {
+
+
+/* Card Section Start */
+.card-section-design {
+  margin-top: 2rem;
+
+  .card-items {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-    .nokhu {
-      text-transform: capitalize;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .card-header {
+    text-align: center;
+    padding: 2rem;
+
+    h3 {
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400;
+      font-size: 26px;
+      span {
+        color: #00b4d4;
+        font-weight: 700;
+      }
     }
+    p {
+      font-size: 14px;
+      color: #757575;
+    }
+  }
+
+  .custom-card {
+    width: 356px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    background: #fff;
+    margin: 20px auto;
+    transition: all 0.2s ease;
+  }
+
+  .card-body h4 {
+    transition: all 0.4s ease;
+  }
+
+  .card-body h4:hover {
+    color: #00b4d4;
+  }
+
+  .custom-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-7px);
+    cursor: pointer;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 25px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+    color: #222;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .card-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 16px;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+  }
+
+  .card-btn {
+    padding: 8px 18px;
+    background: #00b4d4;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+  }
+
+  .card-btn:hover {
+    background: #9fdf09;
+    color: #fff;
   }
 
   ul {
     list-style-type: none;
     display: flex;
-    align-items: center;
-    gap: 2rem;
-
-    .active {
-      color: $primaryColor;
-    }
-    li a {
-      text-decoration: none;
-      font-size: 12px;
-      color: $ankorColor;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: bold;
-      font-family: "montserrat", sans-serif;
-      transition: all 0.4s ease;
-    }
-    li a:hover {
-      color: $primaryColor;
-    }
+    justify-content: space-between;
+    padding: 0;
   }
-  .menuIcon {
-    display: none;
+
+  ul li {
+    margin-bottom: 0.5rem;
+    color: #757575;
+    font-size: 14px;
+    text-transform: capitalize;
+    transition: all 0.4s ease;
+  }
+
+  ul li:hover {
+    color: #00b4d4;
   }
 }
-@media screen and (max-width: 920px) {
-  .navbar-nav ul li {
-    display: none;
+
+@media screen and (max-width: 700px) {
+  .card-header p {
+    font-size: 15px !important;
+    line-height: 1.5rem;
   }
-  .menuIcon {
-    display: block !important;
+  br {
+    list-style-type: none !important;
   }
 }
-// Navbar Section End
+/* Card Section End */
 
-// Hero Section Start
-.hero-section {
-  background-image: url(/assets/image/mim.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
-  // position: relative;
-  z-index: 0;
+// Free Trial Section Start
+.trial-section {
+  margin-top: 3rem;
+  padding: 5rem;
+  background-image: url(/assets/image/free-trial-image);
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  object-fit: cover;
+  background-position: top;
   display: flex;
-  // justify-content: center;
+  justify-content: center;
 
-  .container {
-    z-index: 2;
+  .trial-image {
+    h2 {
+      color: #fff;
+      font-size: 26px;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+      margin-bottom: 1rem;
+      line-height: 1.5rem;
+    }
   }
-
-  .button-group {
-    display: flex;
-    gap: 1rem;
-    .buy-button {
-      padding: 12px 20px;
+  .btn-three {
+    padding: 1rem;
+    button {
+      padding: 10px 16px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: capitalize;
       background-color: transparent;
+      outline: none;
       border: none;
-      background-color: $primaryColor;
-      color: $secenderyColor;
-      border-radius: 20px;
+      background-color: #00bcd4;
+      border-radius: 15px;
+      color: #fff;
       transition: all 0.4s ease;
     }
-
-    .read-more-button {
-      padding: 8px 20px;
-      background-color: transparent;
-      border: none;
-      border: 1px solid $primaryColor;
-      border-radius: 18px;
-      color: $primaryColor;
-      transition: all 0.4s ease;
-      display: flex;
-      align-items: center;
-      i {
-        font-size: 20px;
-        margin-left: 0.5rem;
-      }
-    }
-    .read-more-button:hover {
-      background-color: $primaryColor;
-      color: $secenderyColor;
-    }
-
-    .buy-button:hover {
-      background-color: #0e92af;
+    button:hover {
+      background-color: #008fa1;
+      color: #fff;
     }
   }
 }
-// Hero Section End
+// Free Trial Section End
+
+/* Form Section End */
+.form-section {
+  margin-top: 3rem;
+  .form-header {
+    text-align: center;
+  }
+
+  .form-header p {
+    color: #757575;
+    font-size: 14px;
+  }
+
+  .header-text {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+  }
+
+  .header-text h2 {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    font-size: 26px;
+  }
+
+  .get-in {
+    color: #757575;
+    font-weight: 400;
+  }
+
+  .touch {
+    color: #00b4dc;
+  }
+
+  .form-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .two-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group input {
+    padding: 0.6rem;
+    border: none;
+    border: 1px solid #dee2e6;
+    border-radius: 18px;
+    outline: none;
+    transition: all 0.4s ease;
+    color: #707070;
+    font-size: 14px;
+  }
+
+  .form-group label {
+    padding: 0.7rem 0;
+    font-size: 14px;
+    color: #757575;
+  }
+
+  .form-group textarea {
+    height: 110px;
+    border: none;
+    border: 1px solid #dee2e6;
+    border-radius: 18px;
+    padding: 0.5rem;
+    outline: none;
+    resize: none;
+    transition: all 0.4s ease;
+  }
+
+  textarea:focus {
+    border: 1px solid #00b4dc;
+  }
+
+  input:focus {
+    border: 1px solid #00b4dc;
+  }
+
+  button {
+    padding: 9px;
+    border: none;
+    background-color: transparent;
+    background-color: #00b4dc;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    color: #fff;
+  }
+
+  button:hover {
+    background-color: #008fa1;
+    color: #fff;
+  }
+}
+/* Form Section End */
